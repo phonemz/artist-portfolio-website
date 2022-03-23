@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Rock Salt', sans-serif;
+    color: #fefefe;
+}
+
+body{
+    background: radial-gradient(rgb(10, 85, 184),#333);
+}
+
+.logo, .toggle{
+    z-index: 2;
+    cursor: pointer;
+}
+
+.logo a{
+    text-decoration: none;
+    font-size: 1.4rem;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    height: 10vh;
+}
+
+.suzuka, .kanon, .rin, .mizyu{
+    display: grid;
+    grid-template-columns: 5% 1fr 1fr 1fr 5%;
+    height: 90vh;
+}
+
+.details{
+    grid-column: 2/3;
+    align-self: flex-end;
+    margin-bottom: 20px;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero img{
+    height: 400px;
+    width: auto;
+}
+
+.left{
+    transform: translateY(-5%);
+    transition: ease 300ms;
+}
+
+.hero:hover .left{
+    transform: translateY(0%);
+}
+
+.right{
+    transform: translateY(5%);
+    transition: ease 300ms;
+}
+
+.hero:hover .right{
+    transform: translateY(0%);
+}
+
+.pages{
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.pages div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.pages div h3{
+    padding: 10px;
+}
+
+.slide-down{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #333;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap: 200px;
+    z-index: 1;
+    transform: translateY(-100%);
+    transition: all ease-in-out 400ms;
+}
+
+.showup{
+    transform: translateY(0%);
+}
+
+.social-icon i{
+    padding-right: 20px;
+    transform: scale(1.4);
+}
+
+.contact h2, .social h2{
+    padding-bottom: 20px;
+}
+
+
+
+
+
