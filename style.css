@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
 
-*{
+body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,7 +9,7 @@
     color: #fefefe;
 }
 
-body{
+.portfolio{
     background: radial-gradient(rgb(10, 85, 184),#333);
 }
 
@@ -43,12 +44,14 @@ body{
     margin-bottom: 20px;
 }
 
+.hero a{
+    display: flex;
+}
 .hero{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .hero img{
     height: 400px;
     width: auto;
@@ -81,7 +84,17 @@ body{
 
 .pages div{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.pages .slide{
+    cursor: pointer;
+    transition: transform ease-in-out 400ms;
+}
+
+.pages div:hover .slide{
+    transform: scale(2);
 }
 
 .pages div h3{
@@ -116,6 +129,78 @@ body{
 .contact h2, .social h2{
     padding-bottom: 20px;
 }
+
+.about-page{
+    color: #222;
+}
+
+.banner{
+    background: url(img/banner.png);
+    height: 50vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.banner h1, .banner h2{
+    padding: 40px 40px 0 0;
+    margin: 0;
+}
+
+.info{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.info .text h1, .info .text p{
+    margin: 0;
+}
+
+.info .text p{
+    padding-top: 40px;
+    line-height: 40px;
+}
+
+.info .image{
+    width: 400px;
+}
+
+.about-and-gallery{
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.about-and-gallery .text{
+    width: 45%;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    line-height: 30px;
+}
+
+.about-and-gallery .text h1{
+    margin: 0 0 40px 0;
+}
+
+.gallery img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery{
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
 
 
 
