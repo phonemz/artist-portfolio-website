@@ -21,9 +21,11 @@ body{
 .logo a{
     text-decoration: none;
     font-size: 1.4rem;
+    color: #fefefe;
 }
 
 .navbar{
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +78,7 @@ body{
 }
 
 .pages{
-    position: absolute;
+    position: fixed;
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
@@ -97,8 +99,9 @@ body{
     transform: scale(2);
 }
 
-.pages div h3{
-    padding: 10px;
+.pages h3{
+    margin: 0;
+    padding-right: 10px;
 }
 
 .slide-down{
@@ -110,8 +113,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 30%;
     height: 50vh;
-    gap: 200px;
     z-index: 1;
     transform: translateY(-100%);
     transition: all ease-in-out 400ms;
@@ -121,13 +124,28 @@ body{
     transform: translateY(0%);
 }
 
-.social-icon i{
-    padding-right: 20px;
-    transform: scale(1.4);
+.contact, .social{
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
 }
 
-.contact h2, .social h2{
-    padding-bottom: 20px;
+.contact span:first-child, .social span{
+    font-size: 2rem;
+}
+
+.contact span:last-child, .social-icon{
+    padding-top: 40px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.social a{
+    text-decoration: none;
+    color: #fefefe;
+    padding-right: 20px;
 }
 
 .about-page{
@@ -135,17 +153,21 @@ body{
 }
 
 .banner{
-    background: url(img/banner.png);
+    background: url(img/banner.png) rgba(0, 0, 0,0.6);
+    background-blend-mode: multiply;
     height: 50vh;
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+    justify-content: center;
+    color: #fefefe;
+    text-shadow: rgb(0, 0, 0) 0 0 20px;
+    padding-right: 40px;
 }
 
-.banner h1, .banner h2{
-    padding: 40px 40px 0 0;
+.banner h1{
     margin: 0;
 }
 
@@ -172,7 +194,7 @@ body{
 .about-and-gallery{
     display: flex;
     justify-content: space-between;
-    margin: 40px;
+    margin: 60px 40px;
 }
 
 .about-and-gallery .text{
@@ -198,6 +220,81 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: flex-end;
+}
+
+@media (max-width: 880px){
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info .image{
+        display: flex;
+        align-self: center;
+        margin-top: 40px;
+    }
+
+    .about-and-gallery{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-and-gallery .text{
+        width: 100%;
+    }
+
+    .gallery{
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width:700px){
+    .hero img{
+        height: 300px;
+        width: auto;
+    }
+
+    .slide-down{
+        gap: 20%;
+    }
+
+    .contact, .social{
+        font-size: 1rem;
+    }
+
+    .contact span:first-child, .social span{
+        font-size: 1.6rem;
+    }
+    
+    .contact span:last-child, .social-icon{
+        padding-top: 30px;
+    }
+
+    .info{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info .image{
+        display: flex;
+        align-self: center;
+        margin-top: 40px;
+    }
+
+    .about-and-gallery{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-and-gallery .text{
+        width: 100%;
+    }
+
+    .gallery{
+        width: 100%;
+        justify-content: center;
+    }  
 }
 
 
